@@ -12,9 +12,8 @@
         );
 
       // Check if the user is on a desktop device
-      var isDesktop = !isMobile;
 
-      if (isMobile && isDesktop) {
+      if (isMobile) {
         // The user is neither on mobile nor on desktop, so redirect or show a message
         alert("Access to this page is restricted.");
         window.location.href = "restricted.html"; // You can set this to a page explaining the restriction
