@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restricted Page</title>
+    <title>Desktop-Only Page</title>
     <script type="text/javascript">
       // Check if the user is on a mobile device
       var isMobile =
@@ -11,22 +11,17 @@
           navigator.userAgent
         );
 
-      // Check if the user is on a desktop device
-
-      if (isMobile) {
-        // The user is neither on mobile nor on desktop, so redirect or show a message
-        alert("Access to this page is restricted.");
-        window.location.href = "restricted.html"; // You can set this to a page explaining the restriction
+      if (!isMobile) {
+        // The user is not on a mobile device (likely a desktop), so allow access
+      } else {
+        // The user is on a mobile device, so redirect to a different page or show a message
+        alert("Access to this page is restricted to desktop devices only.");
+        window.location.href = "mobile-not-allowed.html"; // You can set this to a page explaining the restriction
       }
     </script>
   </head>
   <body>
-    <h1>Restricted Page</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-      deserunt aliquid, ex est dolorum vitae accusamus quibusdam, laborum
-      adipisci nesciunt omnis delectus libero facilis ipsum incidunt cum tempora
-      iusto repellendus.
-    </p>
+    <h1>Welcome to the Desktop-Only Page</h1>
+    <p>This page can only be accessed from desktop devices.</p>
   </body>
 </html>
