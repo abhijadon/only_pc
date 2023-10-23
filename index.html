@@ -11,9 +11,10 @@
           navigator.userAgent
         );
 
-      if (isMobile) {
-        // Redirect to a different page or show a message
-        window.location.href = "mobile-not-allowed.html";
+      if (!isMobile) {
+        // The user is on a PC, so redirect to a different page or show a message
+        alert("Access to this page is restricted to mobile devices only.");
+        window.location.href = "pc-not-allowed.html"; // You can set this to a page explaining the restriction
       }
     </script>
   </head>
